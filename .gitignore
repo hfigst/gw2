@@ -1,0 +1,9 @@
+*.xlsm
+*.exe
+*.db
+*.json
+*.txt
+/__pycache__
+/data_files
+/database
+/deprecated_code
