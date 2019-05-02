@@ -21,12 +21,9 @@ class Log:
 		with open(self.path, 'w+') as f:
 			pass
 	
-	def write(self, string, newlines=1):
+	def write(self, string, end='\n'):
 		with open(self.path, 'a+') as f:
-			if newlines:
-				f.write(string + '\n'*newlines)
-			else:
-				f.write(string)
+			f.write(string + end)
 
 if __name__ == '__main__':
 	import datetime

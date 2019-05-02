@@ -1,26 +1,46 @@
 # Use this file to test whether other modules run properly and prototype code
 
-import gw2api
-import dataparse
+from gw2api import v2_listings_buy, v2_listings_sell
+# import dataparse
 import paths
-import sys
-import json
+# import sys
+# import json
+# import os
+from calculations import *
+from database import Gw2Database
+import os
 
-def ingredients_gen():
-	with open(paths.logs + 'recipe_dump.txt') as f:
-		for line in f:
-			line = json.loads(line) # This is the entire recipe information
-			ingredients = line['ingredients']
-			
-			for d in ingredients: # Each value is a dictionary of form {item_id: count}
-				d['recipe_id'] = line['id'] # Append the recipe_id to the entry
-				yield d['recipe_id'], d['item_id'], d['count']
+# gw2db = Gw2Database()
+# item_id = gw2db.lookup('Warbeast Greaves')
+# l2 = gw2db.base(item_id)
 
-x = gen()
+os.chdir('E:\Desktop2\Python Projects\gw2_code')
 
-for i in range(10):
-	print(next(x))
+L = [(12345, 'orange', 283743), (2, 'supercalifragilistic', 3823)]
 
+
+# Get the common length of the tuples, and cycle through all tup[i]'s
+# for i in range(len(L[0])):
+#     col_width = max((len(str(row[i])) for row in L))
+
+#     for tup in L
+
+x = (3+4)*3
+print(x)
+
+
+
+
+
+
+    
+
+
+
+
+
+
+                
 
 
 

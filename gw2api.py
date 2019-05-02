@@ -46,7 +46,7 @@ def v2_items(*item_ids):
 	response = requests.get(url_v2 + 'items', params = parameters)
 	return json.loads(response.text)
 
-# This returns a response object, not really for general use
+# This returns a response object
 def v2_listings(*item_ids):
 	'''
 	Parameters:
@@ -69,6 +69,7 @@ def v2_listings(*item_ids):
 						in the same listing)
 	unit_price (number) – The sell offer or buy order price in coins.
 	quantity (number) – The amount of items being sold/bought in this listing.'''
+	
 	parameters = {'ids': ','.join([str(x) for x in item_ids])}
 	response = requests.get(url_v2 + 'commerce/listings', params = parameters)
 	return response
