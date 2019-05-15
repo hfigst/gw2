@@ -16,6 +16,8 @@ database = fullpath('database')
 # Folder path of any text dumps or log files.
 logs = fullpath('logs')
 
+root = fullpath('')
+
 if __name__ == '__main__':
 	print(logs)
 	print(database)
